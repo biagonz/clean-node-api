@@ -1,5 +1,7 @@
+import { HttpResponse, HttpResquest } from '../protocols/http'
+
 export class SingUpController {
-  handle (httpRequest: any): any {
+  handle (httpRequest: HttpResquest): HttpResponse {
     if (!httpRequest.body.name) {
       return {
         body: new Error('Missing param: name'),
